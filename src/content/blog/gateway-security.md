@@ -12,13 +12,13 @@ But every club has a back alley—the loading dock where deliveries are made. In
 
 Terrifying, isn't it?
 
-### The Default Disaster
+**### The Default Disaster**
 
 By default, an SAP Gateway can be configured to allow almost any external program to register itself and connect. An attacker, or just a poorly written script, can connect to your system at this low level, bypassing many application-layer security checks. They can register a program with a name like `totally_not_a_virus` and your system will just say, "Welcome aboard!"
 
 This is where our two heroes, a pair of unassuming text files, come to the rescue: `reginfo` and `secinfo`.
 
-### `reginfo`: The Bouncer's "Approved Trucking Companies" List
+**### `reginfo`: The Bouncer's "Approved Trucking Companies" List**
 
 The `reginfo` (Registration Info) file is the first line of defense. It answers the question: **"Which external programs are even allowed to *attempt* to register here?"**
 
@@ -36,7 +36,7 @@ In plain English, this means:
 
 If you don't have a `reginfo` file, or it's just `P TP=* HOST=*`, you're essentially saying, "Any truck, from any street in the world, is welcome to pull up to our loading dock." Yikes.
 
-### `secinfo`: The Bouncer's "Who Can Sign for Packages" List
+**### `secinfo`: The Bouncer's "Who Can Sign for Packages" List**
 
 The `secinfo` (Security Info) file is the second, crucial line of defense. It answers the question: **"Okay, an approved truck is here. Which SAP user is allowed to *interact* with it?"**
 
