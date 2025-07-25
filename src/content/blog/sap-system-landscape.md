@@ -10,7 +10,7 @@ If you're new to the world of SAP, you'll hear three acronyms repeated constantl
 
 Think of it like building a new car.
 
-**### 1. The Development System (DEV) - The Factory Floor 🏭**
+**1. The Development System (DEV) - The Factory Floor 🏭**
 
 The DEV system is your workshop, your factory floor, your R&D lab. This is where the magic (and the mess) happens.
 
@@ -20,7 +20,7 @@ The DEV system is your workshop, your factory floor, your R&D lab. This is where
 
 In DEV, changes are bundled into "Transport Requests," which are like specially marked crates containing all the new parts and instructions.
 
-**### 2. The Quality Assurance System (QAS) - The Test Track 🏎️**
+**2. The Quality Assurance System (QAS) - The Test Track 🏎️**
 
 Once the prototype car is built, you don't immediately sell it. You test it. Rigorously. That's the QAS system.
 
@@ -28,7 +28,7 @@ Once the prototype car is built, you don't immediately sell it. You test it. Rig
 * **The Analogy:** The prototype car is taken to a private test track. Professional drivers simulate real-world conditions—sharp turns, high speeds, emergency braking. They check if the new engine performs as expected and if the new seats are comfortable on a long drive. Key business users and testers are your "professional drivers".
 * **Key Rule:** The goal is to find every possible flaw *before* it reaches the customer. If a bug is found, it's not fixed in QAS. The report goes back to the factory (DEV), the engineers fix it, and a new, improved prototype is sent for testing.
 
-**### 3. The Production System (PRD) - The Showroom & The Highway 🛣️**
+**3. The Production System (PRD) - The Showroom & The Highway 🛣️**
 
 This is the real deal. The PRD system is the live environment where the actual business runs.
 
@@ -38,7 +38,7 @@ This is the real deal. The PRD system is the live environment where the actual b
 
 ---
 
-**### Summary: The Flow of Change**
+**Summary: The Flow of Change**
 
 **Code/Config (DEV) → Testing (QAS) → Go-Live (PRD)**
 

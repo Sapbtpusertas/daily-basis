@@ -10,7 +10,7 @@ Every secure building needs a security desk to manage who comes and goes. In the
 
 `SU01` is where you create, manage, and control the digital keycards—the user accounts—that grant access to your SAP system. Let's break down the most common tasks.
 
-**### Creating a New User (Issuing a New Keycard)**
+**Creating a New User (Issuing a New Keycard)**
 
 When a new employee joins, they need access.
 
@@ -23,14 +23,14 @@ When a new employee joins, they need access.
 5.  **Roles Tab:** Assign the PFCG roles that define what this user is allowed to do. This is like programming the keycard to only open certain doors.
 6.  Click **Save**. You've just created a new user.
 
-**### Locking & Unlocking Users (Activating/Deactivating a Keycard)**
+**Locking & Unlocking Users (Activating/Deactivating a Keycard)**
 
 If an employee goes on a long vacation or a security concern arises, you don't delete their keycard—you just deactivate it.
 
 * In `SU01`, enter the User ID and click the **Lock/Unlock** button (the icon with the open and closed padlock).
 * You can see the lock status and choose to lock the user globally or unlock them.
 
-**### Resetting a Password (Issuing a Temporary Key)**
+**Resetting a Password (Issuing a Temporary Key)**
 
 One of the most common helpdesk requests is "I forgot my password!"
 
