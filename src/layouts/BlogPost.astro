@@ -12,15 +12,11 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const currentIndex = posts.findIndex((post) => post.slug === Astro.params.slug);
+// FIX: Use .id to find the current post
+const currentIndex = posts.findIndex((post) => post.id === Astro.params.slug);
 
 const prevPost = posts[currentIndex + 1] ?? null;
 const nextPost = posts[currentIndex - 1] ?? null;
-
-// --- DEBUGGING LOGS ---
-console.log(`--- Debug for page: ${title} ---`);
-console.log('Previous Post Object:', JSON.stringify(prevPost, null, 2));
-console.log('Next Post Object:', JSON.stringify(nextPost, null, 2));
 ---
 <BaseLayout title={title} description={description}>
 	<article>
@@ -39,16 +35,18 @@ console.log('Next Post Object:', JSON.stringify(nextPost, null, 2));
 	{(prevPost || nextPost) && (
 		<nav class="flex justify-between items-start mt-12 border-t border-gray-200 pt-6 gap-4">
 			<div class="w-1/2">
-				{prevPost && prevPost.slug && (
-					<a href={`/blog/${prevPost.slug}/`} class="text-left block p-4 rounded-lg hover:bg-gray-100">
+				{/* FIX: Use .id to build the link */}
+				{prevPost && (
+					<a href={`/blog/${prevPost.id}/`} class="text-left block p-4 rounded-lg hover:bg-gray-100">
 						<span class="block text-sm text-gray-500">← Previous Post</span>
 						<span class="font-semibold text-blue-600">{prevPost.data.title}</span>
 					</a>
 				)}
 			</div>
 			<div class="w-1/2 text-right">
-				{nextPost && nextPost.slug && (
-					<a href={`/blog/${nextPost.slug}/`} class="text-right block p-4 rounded-lg hover:bg-gray-100">
+				{/* FIX: Use .id to build the link */}
+				{nextPost && (
+					<a href={`/blog/${nextPost.id}/`} class="text-right block p-4 rounded-lg hover:bg-gray-100">
 						<span class="block text-sm text-gray-500">Next Post →</span>
 						<span class="font-semibold text-blue-600">{nextPost.data.title}</span>
 					</a>
