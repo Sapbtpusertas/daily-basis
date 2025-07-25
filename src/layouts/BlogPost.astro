@@ -12,6 +12,8 @@ const { title, description, pubDate, heroImage } = Astro.props;
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+// Add this line to debug
+console.log('DEBUG POSTS:', posts);
 
 // Find the current post's index
 const currentIndex = posts.findIndex((post) => post.slug === Astro.params.slug);
