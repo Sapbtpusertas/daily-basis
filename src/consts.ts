@@ -1,5 +1,4 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+// src/consts.ts
 
-export const SITE_TITLE = 'Astro Blog';
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE_TITLE = 'The Daily Basis';
+export const SITE_DESCRIPTION = 'Demystifying SAP Basis from fundamentals to advanced topics. Your daily dose of SAP knowledge.';
