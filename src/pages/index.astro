@@ -1,49 +1,66 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<header>
+				<h1 class="title">Welcome to {SITE_TITLE}</h1>
+				<p class="description">
+					{SITE_DESCRIPTION}
+				</p>
+			</header>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<hr />
+
+			<section>
+				<h2 class="section-title">Our Mission</h2>
+				<p>
+					SAP Basis can feel like a complex maze of acronyms, transaction codes, and technical jargon.
+					Our goal is to be your guide through that maze. We break down everything—from the absolute
+					fundamentals to advanced topics like system migrations and cloud automation—into simple,
+					digestible articles with real-world examples and witty analogies.
+				</p>
+				<p>
+					Whether you're just starting your journey or you're a seasoned pro looking to stay sharp,
+					you'll find something valuable here. Ready to dive in?
+				</p>
+				<a href="/blog" class="button">Explore The Blog</a>
+			</section>
 		</main>
-		<Footer />
-	</body>
-</html>
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		text-align: center;
+	}
+	.about .title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+	.about .description {
+		font-size: 1.2rem;
+		color: var(--fg-muted);
+	}
+	.section-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	.button {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background-color: var(--accent);
+		color: var(--bg);
+		border-radius: 0.25rem;
+		text-decoration: none;
+		margin-top: 1.5rem;
+		font-weight: 600;
+	}
+</style>
