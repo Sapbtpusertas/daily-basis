@@ -1,0 +1,52 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const {
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+		<style is:global>
+			/* Basic global styles */
+			:root {
+				--accent: 136, 58, 234;
+				--accent-light: 224, 204, 250;
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background-color: #F6F6F6;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+			main {
+				flex-grow: 1;
+				width: 100%;
+				max-width: 80ch;
+				margin: auto;
+				padding: 3rem 1rem;
+			}
+		</style>
+	</body>
+</html>
