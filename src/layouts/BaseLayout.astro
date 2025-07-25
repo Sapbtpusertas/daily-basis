@@ -16,6 +16,10 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<Header />
@@ -24,14 +28,19 @@ const {
 		</main>
 		<Footer />
 		<style is:global>
-			/* Basic global styles */
+			/* New Color Palette & Font */
 			:root {
-				--accent: 136, 58, 234;
-				--accent-light: 224, 204, 250;
+				--text-main: #1d1d1f;
+				--text-muted: #6e6e73;
+				--bg-main: #ffffff;
+				--bg-secondary: #f5f5f7;
+				--border-color: #d2d2d7;
+				--accent: #0071e3;
 			}
 			html {
-				font-family: system-ui, sans-serif;
-				background-color: #F6F6F6;
+				font-family: 'Inter', system-ui, sans-serif;
+				background-color: var(--bg-secondary);
+				color: var(--text-main);
 			}
 			body {
 				margin: 0;
@@ -39,6 +48,7 @@ const {
 				display: flex;
 				flex-direction: column;
 				min-height: 100vh;
+				background-color: var(--bg-main);
 			}
 			main {
 				flex-grow: 1;
@@ -46,6 +56,13 @@ const {
 				max-width: 80ch;
 				margin: auto;
 				padding: 3rem 1rem;
+			}
+			a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</body>
