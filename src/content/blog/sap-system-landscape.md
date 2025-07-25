@@ -2,7 +2,7 @@
 title: 'The SAP Landscape: Why Three Systems Are Better Than One'
 description: 'Ever wondered why SAP environments have DEV, QAS, and PRD systems? Let’s explore the most fundamental concept in SAP Basis with a simple analogy.'
 pubDate: 2025-07-26
-heroImage: '/sap-landscape-01.jpg'
+heroImage: '../../assets/sap-landscape-01.jpg'
 ---
 
 If you're new to the world of SAP, you'll hear three acronyms repeated constantly: **DEV**, **QAS**, and **PRD**. These aren't just random letters; they represent the three core systems that form the SAP System Landscape. But why do we need three separate systems to run one application?
